@@ -22,7 +22,7 @@ open class MainActivity : AppCompatActivity() {
     lateinit var tvSeekbarValue:TextView
     lateinit var sekbar: SeekBar
     lateinit var ringtone:Ringtone
-    //lateinit var ab:S
+    //lateinit var ab:
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,6 +77,7 @@ val ab = batteryLevel
                     // serviceIntent.putExtra("inputExtra", tvLevel.toString())
                     ContextCompat.startForegroundService(context!!, serviceIntent)
                     context.sendBroadcast(serviceIntent)
+                    Log.d("abc", "service running")
 
 
                 } else if (intent.action == Intent.ACTION_POWER_DISCONNECTED) {
