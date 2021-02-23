@@ -77,7 +77,6 @@ val ab = batteryLevel
                     // serviceIntent.putExtra("inputExtra", tvLevel.toString())
                     ContextCompat.startForegroundService(context!!, serviceIntent)
                     context.sendBroadcast(serviceIntent)
-                    Log.d("abc", "service running")
 
 
                 } else if (intent.action == Intent.ACTION_POWER_DISCONNECTED) {
